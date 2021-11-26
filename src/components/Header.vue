@@ -6,11 +6,11 @@
     </div>
     <p>
       API by
-      <a
-        href="https://covid19api.com"
-        class="blue--text text--lighten-4"
+      <router-link
+        to="https://covid19api.com"
+        class="blue--text text--lighten-4 text-decoration-none"
         target="_blank"
-        >covid19api.com</a
+        >covid19api.com</router-link
       >
     </p>
   </header>
