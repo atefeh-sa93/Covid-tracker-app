@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-combobox
+    <v-select
       v-model="selected"
       :items="countries"
       item-text="Country"
@@ -8,7 +8,7 @@
       label="Select a country"
       outlined
       @change="onChange()"
-    ></v-combobox>
+    ></v-select>
   </v-container>
 </template>
 
@@ -22,12 +22,13 @@ export default {
   },
   data() {
     return {
-      selected: {},
+      selected: 0,
     };
   },
   methods: {
     onChange() {
-      this.$emit("get-country", this.selected);
+      const country = this.countries.find((item) => item.ID === this.selected);
+      this.$emit("get-country", country);
     },
   },
 };
